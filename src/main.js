@@ -19,7 +19,10 @@ import VueResource from 'vue-resource'
 // 2.2 安装vue-resource
 Vue.use(VueResource)
 // 设置请求的根路径
-Vue.http.options.root = '../../../src/'
+// Vue.http.options.root = '../../../src/'
+// Vue.http.options.root = "http://www.liulongbin.top:3005/"
+// 全局设置post时候表单数据格式组织形式 application/x-www-form-urlencoded
+Vue.http.options.emulateJSON = true;
 
 // 按需导入mint-ui中的组件
 import { Header, Swipe, SwipeItem, Button } from 'mint-ui'

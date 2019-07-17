@@ -29,7 +29,7 @@ export default {
   },
   methods:{
     getNewsList(){  //获取新闻列表
-      this.$http.get('Json/newslist.json').then(result => {
+      this.$http.get('../../../src/Json/newslist.json').then(result => {
         if(result.body.status === 0){
           this.newslist = result.body.message
           console.log(result);

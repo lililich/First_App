@@ -30,7 +30,7 @@ export default {
   },
   methods:{
     getNewsInfo(){  //获取新闻详情
-      this.$http.get('Json/newsinfo.json').then(result =>{
+      this.$http.get('../../../src/Json/newsinfo.json').then(result =>{
         if(result.body.status === 0){
           this.newsinfo = result.body.message[this.id-1]
           console.log(result);
