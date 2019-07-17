@@ -1,0 +1,15 @@
+{
+    "status": 0,
+    "message":[
+        {
+            "img":"http://www.itcast.cn/images/slidead/BEIJING/2017440109442800.jpg",
+            "url":"http://www.baidu.com"
+        },{
+            "img":"http://www.itcast.cn/images/slidead/BEIJING/2017511009514700.jpg",
+            "url":"https://echarts.baidu.com"
+        },{
+            "img":"http://www.itcast.cn/images/slidead/BEIJING/2017421414422600.jpg",
+            "url":"https://cli.vuejs.org"
+        }
+    ]
+}
