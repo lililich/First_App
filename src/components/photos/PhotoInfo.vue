@@ -9,9 +9,10 @@
 
     <hr>
     <!-- 缩略图区域 -->
-    <!-- <img class="preview-img" v-for="(item,index) in list" :key="item.src" :src="item.src" height="100" @click="$preview.open(index,list)"> -->
-    
-    <vue-preview :slides="list"></vue-preview>
+    <div class="thumbs">
+      <!-- <img class="preview-img" v-for="(item,index) in list" :key="item.src" :src="item.src" height="100" @click="$preview.open(index,list)">   -->
+      <vue-preview :slides="list"></vue-preview>
+    </div>
     <!-- 图片内容区域 -->
     <div class="content" v-html="photoinfo.content"></div>
     <!-- 引入评论区子组件 -->
@@ -88,6 +89,14 @@ export default {
     font-size: 13px;
     line-height: 30px;
 
+  }
+  .thumbs{
+    img {
+      height: 100px;
+      width: 100px;
+      margin:10px;
+      box-shadow: 0 0 8px #999
+    }
   }
 }
 </style>
