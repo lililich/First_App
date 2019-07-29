@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import { Toast } from 'mint-ui'
+
 export default {
   data() {
     // 往自己组件内部，挂载一些私有数据的

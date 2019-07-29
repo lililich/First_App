@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- 轮播图区域 -->
-        <swiper :lunbotuList="lunbotuList"></swiper>
+        <swiper :lunbotuList="lunbotuList" :isfull="true"></swiper>
         <!-- 九宫格到六宫格改造工程 -->
         <ul class="mui-table-view mui-grid-view mui-grid-9">
 		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newslist">
