@@ -24,7 +24,7 @@
           <p class="price">
             市场价：<del>￥{{ goodsinfo.market_price }}</del>&nbsp;&nbsp;销售价：<span class="now_price">{{ goodsinfo.sell_price }}</span>
           </p>
-          <p>购买数量：<numbox @getcount="getSelectedCount"></numbox></p>
+          <p>购买数量：<numbox @getcount="getSelectedCount" :max="goodsinfo.stock_quantity"></numbox></p>
           <p>
             <mt-button type="primary" size="small">立即购买</mt-button>
             <mt-button type="danger" size="small" @click="addToShopCar()">加入购物车</mt-button>
@@ -110,6 +110,16 @@ export default {
     addToShopCar(){
       // 添加到购物车
       this.ballFlag = !this.ballFlag
+      //{id：商品的id，count：要购买的数量，price：商品的单价，selected：false是否为选中}
+      // 拼接出一个，要保存到store中car数组里的商品信息
+      var goodsinfo = { 
+        id: this.id, 
+        count: this.selectedCount, 
+        price: this.goodsinfo.sell_price, 
+        selected: true
+      }
+      // 调用store中的mytations来将商品加入购物车
+      this.$store.commit("addToCar", goodsinfo)
     },
     beforeEnter(el){
       el.style.transform = "translate(0,0)"
