@@ -35,7 +35,7 @@ export default {
           // this.comments = result.body.message
           // 每当获取新评论数据的时候，不要把老数据清空覆盖，而是应该以老数据，拼接上新数据
           this.comments = this.comments.concat( result.body.message )
-          console.log(result);
+          // console.log(result);
         }else{
           Toast('获取评论失败！')
         }

@@ -29,10 +29,10 @@ export default {
   },
   methods:{
     getNewsList(){  //获取新闻列表
-      this.$http.get('../../../src/Json/newslist.json').then(result => {
+      this.$http.get('http://www.liulongbin.top:3005/api/getnewslist').then(result => {
         if(result.body.status === 0){
           this.newslist = result.body.message
-          console.log(result);
+          // console.log(result);
         }else{
           Toast('获取新闻列表失败！')
         }

@@ -43,7 +43,7 @@ export default {
     methods:{
         getLunbotu(){  
             //获取轮播图数据的方法
-            this.$http.get("../../../src/Json/lunbotu.json").then(result => {
+            this.$http.get("http://www.liulongbin.top:3005/api/getlunbo").then(result => {
                 // console.log(result.body);
                 if (result.body.status === 0) {
                     this.lunbotuList = result.body.message

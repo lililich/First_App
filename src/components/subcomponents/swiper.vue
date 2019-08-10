@@ -4,7 +4,7 @@
       <!-- 组件中使用for循环、一定要绑定key -->
       <!-- 将来谁使用此轮播图组件，谁为我们传递lunbotuList -->
       <!-- 此时，lunbotuList应该是父组件向子组件传值来设置 -->
-      <mt-swipe-item v-for="item in lunbotuList" :key="item.url">
+      <mt-swipe-item v-for="item in lunbotuList" :key="item.img">
         <img :src="item.img" alt="" :class="{'full' : isfull}">
       </mt-swipe-item>
     </mt-swipe>

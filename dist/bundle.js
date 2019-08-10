@@ -32425,7 +32425,7 @@ exports.default = {
             var _this = this;
 
             //获取轮播图数据的方法
-            this.$http.get("../../../src/Json/lunbotu.json").then(function (result) {
+            this.$http.get("http://www.liulongbin.top:3005/api/getlunbo").then(function (result) {
                 // console.log(result.body);
                 if (result.body.status === 0) {
                     _this.lunbotuList = result.body.message;
@@ -33022,10 +33022,10 @@ exports.default = {
       var _this = this;
 
       //获取新闻列表
-      this.$http.get('../../../src/Json/newslist.json').then(function (result) {
+      this.$http.get('http://www.liulongbin.top:3005/api/getnewslist').then(function (result) {
         if (result.body.status === 0) {
           _this.newslist = result.body.message;
-          console.log(result);
+          // console.log(result);
         } else {
           (0, _toast2.default)('获取新闻列表失败！');
         }
@@ -33081,12 +33081,11 @@ exports.default = {
       var _this = this;
 
       //获取新闻详情
-      this.$http.get('../../../src/Json/newsinfo.json').then(function (result) {
+      this.$http.get("http://www.liulongbin.top:3005/api/getnew/" + this.id).then(function (result) {
         if (result.body.status === 0) {
-          _this.newsinfo = result.body.message[_this.id - 1];
-          console.log(result);
+          _this.newsinfo = result.body.message[0];
         } else {
-          Toast('获取新闻详情失败！');
+          Toast("获取新闻详情失败！");
         }
       });
     }
@@ -33151,7 +33150,7 @@ exports.default = {
           // this.comments = result.body.message
           // 每当获取新评论数据的时候，不要把老数据清空覆盖，而是应该以老数据，拼接上新数据
           _this.comments = _this.comments.concat(result.body.message);
-          console.log(result);
+          // console.log(result);
         } else {
           (0, _toast2.default)('获取评论失败！');
         }
@@ -37823,7 +37822,7 @@ var render = function() {
         "mt-swipe",
         { attrs: { auto: 4000 } },
         _vm._l(_vm.lunbotuList, function(item) {
-          return _c("mt-swipe-item", { key: item.url }, [
+          return _c("mt-swipe-item", { key: item.img }, [
             _c("img", {
               class: { full: _vm.isfull },
               attrs: { src: item.img, alt: "" }
