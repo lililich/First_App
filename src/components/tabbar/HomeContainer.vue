@@ -44,7 +44,7 @@ export default {
         getLunbotu(){  
             //获取轮播图数据的方法
             this.$http.get("../../../src/Json/lunbotu.json").then(result => {
-                console.log(result.body);
+                // console.log(result.body);
                 if (result.body.status === 0) {
                     this.lunbotuList = result.body.message
                     // Toast('加载轮播图ok！')
