@@ -52,6 +52,7 @@ export default {
                     Toast('加载轮播图失败')
                 }
             })
+            .catch(console.error)
         }
     },
     components:{

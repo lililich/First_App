@@ -32433,7 +32433,7 @@ exports.default = {
                 } else {
                     (0, _toast2.default)('加载轮播图失败');
                 }
-            });
+            }).catch(console.error);
         }
     },
     components: {
