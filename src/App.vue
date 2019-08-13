@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <!-- 顶部Header区域 -->
-    <mt-header fixed title="小畅首发app·Vue项目">
+    <mt-header fixed :title="title">
 			<span slot="left" @click="goBack" v-show="flag">
 				<mt-button icon="back">返回</mt-button>
 			</span>
@@ -38,7 +38,8 @@
 export default {
 	data(){
 		return{
-			flag:false
+			flag:false,
+			title: '小畅首发app·Vue项目'
 		}
 	},
 	created(){
@@ -74,16 +75,16 @@ export default {
 
 .v-enter{
 	opacity: 0;
-	transform: translateX(100%)
+	transform: translateX(-100%)
 }
 .v-leave-to{
 	opacity: 0;
-	transform: translateX(-100%);
+	transform: translateX(100%);
 	position: absolute;
 }
 
 .v-enter-active, .v-leave-active{
-	transition: all 0.5s ease
+	transition: all 0.1s ease
 }
 // 该类名，解决tabbar我无法使用的问题
 .mui-bar-tab .mui-tab-item-lib.mui-active {
