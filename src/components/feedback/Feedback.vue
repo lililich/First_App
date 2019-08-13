@@ -1,5 +1,6 @@
 <template>
-  <div class="cmt-container">
+  <div class="feedback-container">
+      <!-- 留言反馈 -->
     <h3>发表评论</h3>
     <hr>
     <textarea placeholder="请输入要评论的内容（最多吐槽120字）" maxlength="120" v-model="msg"></textarea>
@@ -22,7 +23,8 @@ export default {
     return{
       pageIndex:1,  //默认显示第一页数据
       comments:[],
-      msg:''  //评论输入的内容
+      msg:'',  //评论输入的内容
+      id:20
     }
   },
   created(){
@@ -55,7 +57,7 @@ export default {
       // 参数1：请求的URL地址
       // 参数2：提交给服务器的数据对象{ content：'this.msg'}
       // 参数3：定义提交时候表单中数据的格式{ emulateJSON：true }
-      this.$http.post("http://www.liulongbin.top:3005/api/postcomment/" + this.$route.params.id, {
+      this.$http.post("http://www.liulongbin.top:3005/api/postcomment/" + this.id, {
           content: this.msg.trim()
         }).then(result =>{
         if(result.body.status === 0){
@@ -74,12 +76,12 @@ export default {
       })
     }
   },
-  props:["id"]
 }
 </script>
 
 <style lang="scss" scoped>
-.cmt-container{
+.feedback-container{
+  padding:10px 5px;
   h3{
     font-size: 18px;
   }

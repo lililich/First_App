@@ -13,15 +13,15 @@
 		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/goodslist">
 		        <img src="../../images/menu3.png" alt="">
 		        <div class="mui-media-body">商品购买</div></router-link></li>
-		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/feedback">
 		        <img src="../../images/menu4.png" alt="">
-		        <div class="mui-media-body">留言反馈</div></a></li>
-		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		        <div class="mui-media-body">留言反馈</div></router-link></li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="https://lililich.work">
 		        <img src="../../images/menu5.png" alt="">
-		        <div class="mui-media-body">视频社区</div></a></li>
-		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		        <div class="mui-media-body">我的博客</div></a></li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/contact">
 		        <img src="../../images/menu6.png" alt="">
-		        <div class="mui-media-body">联系我</div></a></li>
+		        <div class="mui-media-body">联系我</div></router-link></li>
 		</ul> 
         <!-- <h3>HomeContainer</h3> -->
     </div>
